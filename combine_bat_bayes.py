@@ -14,28 +14,28 @@ from time import strftime
 
 day = strftime("%Y-%m-%d")
 desc = 'testAfternoon'
-pitchpath = 'C:\\Users\Brian\\Documents\\Predictions\\MLB\\Pitcher' + desc +'_' + day + '.csv' 
-batpath = 'C:\\Users\Brian\\Documents\\Predictions\\MLB\\Batter' + desc +'_' + day + '.csv'
+pitchpath = '...\\MLB\\Pitcher' + desc +'_' + day + '.csv' 
+batpath = '...\\MLB\\Batter' + desc +'_' + day + '.csv'
 
-json_file = open('C:\\Users\\Brian\\Documents\\Player Dictionaries\\MLB\\batters.json')
+json_file = open('...\\MLB\\batters.json')
 json_str = json_file.read()
 batters = json.loads(json_str)
 json_file.close()
 
-json_file = open('C:\\Users\\Brian\\Documents\\Player Dictionaries\\MLB\\pitchers.json')
+json_file = open('...\\MLB\\pitchers.json')
 json_str = json_file.read()
 pitchers = json.loads(json_str)
 json_file.close()
 
-json_file = open('C:\\Users\\Brian\\Documents\\Player Dictionaries\\MLB\\lineups.json')
+json_file = open('...\\MLB\\lineups.json')
 json_str = json_file.read()
 lineups = json.loads(json_str)
 json_file.close()
 
-parkf = pd.read_csv('C:\Users\Brian\Documents\Player Dictionaries\MLB\Park Factors Split.csv')
+parkf = pd.read_csv('...\\MLB\\Park Factors Split.csv')
 del parkf['Season']
 
-sparkf = pd.read_csv('C:\Users\Brian\Documents\Player Dictionaries\MLB\Park Factors.csv')
+sparkf = pd.read_csv('...\\MLB\\Park Factors.csv')
 del sparkf['Season']
 
 print('Unpacking batter dictionaries...')
