@@ -39,16 +39,16 @@ sparkf = pd.read_csv('C:\Users\Brian\Documents\Player Dictionaries\MLB\Park Fact
 del sparkf['Season']
 
 print('Unpacking batter dictionaries...')
-ratiob = scrape_tools.jsonopen('C:\\Users\\Brian\\Documents\\Player Dictionaries\\MLB\\ratio_batter.json',
+ratiob = scrape_tools.jsonopen('...\\MLB\\ratio_batter.json',
                                ['Year', 'Tm', 'PA', 'HR%', 'SO%', 'BB%', 'XBH%', 'X/H%', 'SO/W', 'AB/SO', 'AB/HR', 'GB/FB', 'IP%', 'LD%', 'HR/FB', 'IF/FB', 'GB%', 'FB%'])
-batp15 = scrape_tools.jsonopen('C:\\Users\\Brian\\Documents\\Player Dictionaries\\MLB\\bat_platoon_2015.json',
+batp15 = scrape_tools.jsonopen('...\\MLB\\bat_platoon_2015.json',
                                ['Split', 'PA', 'AB', 'H', '2B', '3B', 'HR', 'SB', 'SO', 'BB', 'BAbip'])
-batp14 = scrape_tools.jsonopen('C:\\Users\\Brian\\Documents\\Player Dictionaries\\MLB\\bat_platoon_2014.json',
+batp14 = scrape_tools.jsonopen('...\\MLB\\bat_platoon_2014.json',
                                ['Split', 'PA', 'AB', 'H', '2B', '3B', 'HR', 'SB', 'SO', 'BB', 'BAbip'])
 print('Half-way through...')
-batp13 = scrape_tools.jsonopen('C:\\Users\\Brian\\Documents\\Player Dictionaries\\MLB\\bat_platoon_2013.json',
+batp13 = scrape_tools.jsonopen('...\\MLB\\bat_platoon_2013.json',
                                ['Split', 'PA', 'AB', 'H', '2B', '3B', 'HR', 'SB', 'SO', 'BB', 'BAbip'])
-batp12 = scrape_tools.jsonopen('C:\\Users\\Brian\\Documents\\Player Dictionaries\\MLB\\bat_platoon_2012.json',
+batp12 = scrape_tools.jsonopen('...\\MLB\\bat_platoon_2012.json',
                                ['Split', 'PA', 'AB', 'H', '2B', '3B', 'HR', 'SB', 'SO', 'BB', 'BAbip'])
 normbatp = {}
 for key in batters:
@@ -83,8 +83,3 @@ for key in batters:
         comb['BIP'] = comb['PA'] - comb['HR'] - comb['BB'] - comb['SO']
         proj = bayes_calc.BatWSumProj(comb)
         hr, so, bb, bip = bayes_calc.BayesCalc(proj, batters[key][3], batters[key][2])
-            
-#            if arm == 0:
-#                right = proj
-#            else:
-#                left = proj
